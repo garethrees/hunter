@@ -7,7 +7,7 @@ Gem::Specification.new do |s|
   s.version     = Hunter::VERSION
   s.authors     = ["Gareth Rees"]
   s.email       = ["gareth.h.rees@gmail.com"]
-  s.homepage    = ""
+  s.homepage    = "http://github.com/garethrees/hunter"
   s.summary     = %q{Hunter hunts for a pattern in your log files}
   s.description = %q{Hunter was made to look through log archive directories and inside each log count the number of hits on an email tracking gif}
 
