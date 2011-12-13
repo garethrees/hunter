@@ -6,10 +6,10 @@ Gem::Specification.new do |s|
   s.name        = "hunter"
   s.version     = Hunter::VERSION
   s.authors     = ["Gareth Rees"]
-  s.email       = ["reesG12@cardiff.ac.uk"]
+  s.email       = ["gareth.h.rees@gmail.com"]
   s.homepage    = ""
-  s.summary     = %q{TODO: Write a gem summary}
-  s.description = %q{TODO: Write a gem description}
+  s.summary     = %q{Hunter hunts for a pattern in your log files}
+  s.description = %q{Hunter was made to look through log archive directories and inside each log count the number of hits on an email tracking gif}
 
   s.rubyforge_project = "hunter"
 
