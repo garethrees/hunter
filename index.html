@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html>
+
+  <head>
+    <meta charset='utf-8' />
+    <meta http-equiv="X-UA-Compatible" content="chrome=1" />
+    <meta name="description" content="Hunter : Hunter hunts for a pattern in your log files" />
+
+    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
+
+    <title>Hunter</title>
+  </head>
+
+  <body>
+
+    <!-- HEADER -->
+    <div id="header_wrap" class="outer">
+        <header class="inner">
+          <a id="forkme_banner" href="https://github.com/garethrees/hunter">Fork Me on GitHub</a>
+
+          <h1 id="project_title">Hunter</h1>
+          <h2 id="project_tagline">Hunter hunts for a pattern in your log files</h2>
+
+          <section id="downloads">
+            <a class="zip_download_link" href="https://github.com/garethrees/hunter/zipball/master">Download this project as a .zip file</a>
+            <a class="tar_download_link" href="https://github.com/garethrees/hunter/tarball/master">Download this project as a tar.gz file</a>
+          </section>
+        </header>
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div id="main_content_wrap" class="outer">
+      <section id="main_content" class="inner">
+        <h1>Search for a pattern in your log files</h1>
+
+<p>I generally use a tracking gif in the mass emails I send out to get a rough idea of the open rate. It's not a small task to open each log file, filter it and then count each occurance of the gif.</p>
+
+<p>Hunter does this for you!</p>
+
+<p><strong>WARNING:</strong> Hunter has <strong>no tests</strong>. This was thrown together, so use with caution. Contributions are very welcome.</p>
+
+<h2>How to Use</h2>
+
+<h3>Install</h3>
+
+<pre><code>    gem install hunter
+</code></pre>
+
+<h3>Use</h3>
+
+<p>Create a new hunt for the string you want to match:</p>
+
+<pre><code>    hunt = Hunter::Hunt.new('/images/email/tracking.gif')
+</code></pre>
+
+<h4>Look in the current log</h4>
+
+<pre><code>    hunt.look_in('/var/log/httpd/access.log')
+</code></pre>
+
+<h4>Look in an archived log</h4>
+
+<pre><code>    hunt.look_in_archived('/var/log/httpd/log_archive/access.log.1.gz')
+</code></pre>
+
+<h4>Look through a folder of archived logs</h4>
+
+<pre><code>    hunt.look_through_archive('/var/log/httpd/log_archive')
+</code></pre>
+
+<h4>Look through a folder of archived logs for a specific log type</h4>
+
+<pre><code>    hunt.look_through_archive('/var/log/httpd/log_archive', 'access.log')
+</code></pre>
+
+<h2>Known Issues</h2>
+
+<ul>
+<li>"Archived" means with the file extension <code>.gz</code> – no other compression formats are supported</li>
+<li>
+<code>look_through_archive()</code> relies on your log appending a digit after the original filename and then compressing to <code>.gz</code>
+
+<ul>
+<li>e.g. <code>access.log</code> becomes <code>access.log.1.gz</code>
+</li>
+</ul>
+</li>
+<li><strong>There are no tests</strong></li>
+</ul>
+      </section>
+    </div>
+
+    <!-- FOOTER  -->
+    <div id="footer_wrap" class="outer">
+      <footer class="inner">
+        <p class="copyright">Hunter maintained by <a href="https://github.com/garethrees">garethrees</a></p>
+        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+      </footer>
+    </div>
+
+    
+
+  </body>
+</html>
