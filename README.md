@@ -1,5 +1,7 @@
 # Search for a pattern in your log files
 
+[![Code Climate](https://codeclimate.com/github/garethrees/hunter.png)](https://codeclimate.com/github/garethrees/hunter)
+
 I generally use a tracking gif in the mass emails I send out to get a rough idea of the open rate. It's not a small task to open each log file, filter it and then count each occurance of the gif.
 
 Hunter does this for you!
